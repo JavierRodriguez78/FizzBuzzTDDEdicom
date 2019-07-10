@@ -13,4 +13,9 @@ public class FizzBuzz {
 		return 0 == value%5;
 	}
 	
+	public boolean isFizzBuzz(int value)
+	{
+		return this.isFizz(value) && this.isBuzz(value);
+	}
+	
 }

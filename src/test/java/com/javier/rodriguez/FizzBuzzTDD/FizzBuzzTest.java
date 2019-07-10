@@ -104,11 +104,11 @@ public class FizzBuzzTest
 	
 	@Test
 	@UseDataProvider("dataNumberProviderForFizzBuzzText")
-	public void itShouldGenerateTheCorrectReplacmentForEachNumber(final int input, final boolean expected) {
+	public void itShouldGenerateTheCorrectReplacmentForEachNumber(final int input, final String expected) {
 		
 		
 				//Act
-				boolean result = FizzBuzz.getReplacement(input);
+				String result = FizzBuzz.getReplacement(input);
 				
 				//Assertion
 				assertEquals(expected, result);

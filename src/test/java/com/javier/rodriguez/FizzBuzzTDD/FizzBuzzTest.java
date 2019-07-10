@@ -84,8 +84,10 @@ public class FizzBuzzTest
 	@UseDataProvider("dataNumberProviderForBuzz")
 	public void itShouldReturnBuzzIfDivisibleByFive(final int input, final boolean expected) {
 				
+				BuzzRule  buzzRule = new BuzzRule();
+				
 				//Act
-				boolean result = FizzBuzz.isBuzz(input);
+				boolean result = buzzRule.match(input);
 				
 				//Assertion
 				assertEquals(expected, result);

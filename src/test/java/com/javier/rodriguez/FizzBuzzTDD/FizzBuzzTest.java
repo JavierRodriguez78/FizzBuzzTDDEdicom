@@ -51,6 +51,19 @@ public class FizzBuzzTest
 		};
 	}
 	
+	@DataProvider
+	public static Object[][] dataNumberProviderForFizzBuzzText(){
+		return new Object[][] {
+			{1,"1"},
+			{2,"2"},
+			{3, "Fizz"},
+			{4, "4"},
+			{5, "Buzz"},
+			{6, "Fizz"},
+			{15, "FizzBuzz"}
+		};
+	}
+	
 	@Test
 	@UseDataProvider("dataNumberProviderForFizz")
 	public void itShoudReturnFizzIfDivisibleByThree(final int input, final boolean expected)
@@ -89,6 +102,18 @@ public class FizzBuzzTest
 		
 	}
 	
+	@Test
+	@UseDataProvider("dataNumberProviderForFizzBuzzText")
+	public void itShouldGenerateTheCorrectReplacmentForEachNumber(final int input, final boolean expected) {
+		
+		
+				//Act
+				boolean result = FizzBuzz.getReplacement(input);
+				
+				//Assertion
+				assertEquals(expected, result);
+		
+	}
 	
 	
 	

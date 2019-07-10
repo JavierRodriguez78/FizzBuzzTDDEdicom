@@ -1,13 +1,11 @@
 package com.javier.rodriguez.FizzBuzzTDD;
 
 import org.junit.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
-
+import static org.junit.Assert.assertTrue;
 /**
  * Unit test for simple App.
  */
-public class FizzBuzzTest  extends TestCase
+public class FizzBuzzTest 
 {
 	
 	@Test

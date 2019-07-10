@@ -68,9 +68,12 @@ public class FizzBuzzTest
 	@UseDataProvider("dataNumberProviderForFizz")
 	public void itShoudReturnFizzIfDivisibleByThree(final int input, final boolean expected)
 	{
+		
+		FizzRule fizzRule = new FizzRule();
+		
 				
 		//Act
-		boolean result = FizzBuzz.isFizz(input);
+		boolean result = FizzRule.march(input);
 		
 		//Assertion
 		assertEquals(expected, result);

@@ -55,12 +55,9 @@ public class FizzBuzzTest
 	@UseDataProvider("dataNumberProviderForFizz")
 	public void itShoudReturnFizzIfDivisibleByThree(final int input, final boolean expected)
 	{
-		//Arragnge
-		FizzBuzz fizzBuzz = new FizzBuzz();
-		
-		
+				
 		//Act
-		boolean result = fizzBuzz.isFizz(input);
+		boolean result = FizzBuzz.isFizz(input);
 		
 		//Assertion
 		assertEquals(expected, result);
@@ -70,13 +67,9 @@ public class FizzBuzzTest
 	@Test
 	@UseDataProvider("dataNumberProviderForBuzz")
 	public void itShouldReturnBuzzIfDivisibleByFive(final int input, final boolean expected) {
-		
-		//Arragnge
-				FizzBuzz fizzBuzz = new FizzBuzz();
-				int value = input;
 				
 				//Act
-				boolean result = fizzBuzz.isBuzz(value);
+				boolean result = FizzBuzz.isBuzz(input);
 				
 				//Assertion
 				assertEquals(expected, result);
@@ -87,12 +80,9 @@ public class FizzBuzzTest
 	@UseDataProvider("dataNumberProviderForFizzBuzz")
 	public void itShouldReturnFizzBuzzIfDivisibleByThreeAndFive(final int input, final boolean expected) {
 		
-		//Arragnge
-				FizzBuzz fizzBuzz = new FizzBuzz();
-				int value = input;
-				
+		
 				//Act
-				boolean result = fizzBuzz.isFizzBuzz(value);
+				boolean result = FizzBuzz.isFizzBuzz(input);
 				
 				//Assertion
 				assertEquals(expected, result);

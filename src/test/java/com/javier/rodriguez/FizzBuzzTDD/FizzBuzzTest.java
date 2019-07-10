@@ -118,7 +118,7 @@ public class FizzBuzzTest
 	}
 	
 	@Test
-	@UseDataProvider("dataNumberProviderForBuzz")
+	@UseDataProvider("dataNumberProviderEdicom")
 	public void itShouldReturnEdicomIfDivisibleBySeven(final int input, final boolean expected) {
 				
 				EdicomRule  edicomRule = new EdicomRule();

@@ -63,6 +63,15 @@ public class FizzBuzzTest
 			{15, "FizzBuzz"}
 		};
 	}
+	@DataProvider
+	public static Object[][] dataNumberProviderEdicom(){
+		return new Object[][] {
+			{7, true},
+			{14, true},
+			{21, true},
+			{28, true},
+		};
+	}
 	
 	@Test
 	@UseDataProvider("dataNumberProviderForFizz")
@@ -108,7 +117,19 @@ public class FizzBuzzTest
 		
 	}
 	
-	
+	@Test
+	@UseDataProvider("dataNumberProviderForBuzz")
+	public void itShouldReturnEdicomIfDivisibleBySeven(final int input, final boolean expected) {
+				
+				EdicomRule  edicomRule = new EdicomRule();
+				
+				//Act
+				boolean result = edicomRule.match(input);
+				
+				//Assertion
+				assertEquals(expected, result);
+		
+	}
 	
 	
 	

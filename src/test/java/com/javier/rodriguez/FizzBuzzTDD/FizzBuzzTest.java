@@ -73,7 +73,7 @@ public class FizzBuzzTest
 		
 				
 		//Act
-		boolean result = FizzRule.march(input);
+		boolean result = fizzRule.match(input);
 		
 		//Assertion
 		assertEquals(expected, result);

@@ -22,7 +22,7 @@ public class FizzBuzzTest
 		return new Object[][] {
 			{3, true},
 			{6, true},
-			{15, false},
+			{15, true},
 			{18, true}
 			};
 		}
@@ -32,9 +32,22 @@ public class FizzBuzzTest
 		return new Object[][] {
 			{5, true},
 			{10, true},
-			{15, false},
+			{15, true},
 			{25, true}
 			
+		};
+	}
+	
+	@DataProvider
+	public static Object[][] dataNumberProviderForFizzBuzz(){
+		return new Object[][] {
+			{15, true},
+			{30, true},
+			{45, true},
+			{60, true},
+			{75, true},
+			{90, true}
+	
 		};
 	}
 	
@@ -69,5 +82,25 @@ public class FizzBuzzTest
 				assertEquals(expected, result);
 		
 	}
+	
+	@Test
+	@UseDataProvider("dataNumberProviderForFizzBuzz")
+	public void itShouldReturnFizzBuzzIfDivisibleByThreeAndFive(final int input, final boolean expected) {
+		
+		//Arragnge
+				FizzBuzz fizzBuzz = new FizzBuzz();
+				int value = input;
+				
+				//Act
+				boolean result = fizzBuzz.isFizzBuzz(value);
+				
+				//Assertion
+				assertEquals(expected, result);
+		
+	}
+	
+	
+	
+	
 }
 

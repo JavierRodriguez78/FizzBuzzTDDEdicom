@@ -98,9 +98,10 @@ public class FizzBuzzTest
 	@UseDataProvider("dataNumberProviderForFizzBuzz")
 	public void itShouldReturnFizzBuzzIfDivisibleByThreeAndFive(final int input, final boolean expected) {
 		
+			FizzBuzzRule fizzBuzzRule = new FizzBuzzRule();
 		
 				//Act
-				boolean result = FizzBuzz.isFizzBuzz(input);
+				boolean result = fizzBuzzRule.isFizzBuzz(input);
 				
 				//Assertion
 				assertEquals(expected, result);

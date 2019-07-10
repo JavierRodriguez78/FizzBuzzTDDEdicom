@@ -101,25 +101,14 @@ public class FizzBuzzTest
 			FizzBuzzRule fizzBuzzRule = new FizzBuzzRule();
 		
 				//Act
-				boolean result = fizzBuzzRule.isFizzBuzz(input);
+				boolean result = fizzBuzzRule.match(input);
 				
 				//Assertion
 				assertEquals(expected, result);
 		
 	}
 	
-	@Test
-	@UseDataProvider("dataNumberProviderForFizzBuzzText")
-	public void itShouldGenerateTheCorrectReplacmentForEachNumber(final int input, final String expected) {
-		
-		
-				//Act
-				String result = FizzBuzz.getReplacement(input);
-				
-				//Assertion
-				assertEquals(expected, result);
-		
-	}
+	
 	
 	
 	
